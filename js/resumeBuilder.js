@@ -96,7 +96,7 @@ var projects = {
 var formattedName = HTMLheaderName.replace("%data%",bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
 
-var formattedPic = HTMLbioPic.replace("%data%",bio.pictureURL);
+var formattedPic = HTMLbioPic.replace("%data%",bio.bioPic);
 var formattedWelcome = HTMLWelcomeMsg.replace("%data",bio.welcome);
 
 
