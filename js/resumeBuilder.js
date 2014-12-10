@@ -23,7 +23,7 @@ var work = {
       "employer": "North Carolina State University",
       "title": "Teaching and Research Assistant",
       "dates": "2011-present",
-      "city": "Raleigh, NC, US",
+      "location": "Raleigh, NC, US",
       "description": "Teacher and researcher"
     }
   ]
@@ -97,10 +97,36 @@ var formattedName = HTMLheaderName.replace("%data%",bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
 
 var formattedPic = HTMLbioPic.replace("%data%",bio.bioPic);
-var formattedWelcome = HTMLWelcomeMsg.replace("%data",bio.welcome);
+var formattedWelcome = HTMLWelcomeMsg.replace("%data%",bio.welcome);
 
 
 
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 $("#header").prepend(formattedPic);
+
+if (bio.skills.length > 0)
+{
+  $("#header").append(HTMLskillsStart);
+  for (skill in bio.skills)
+  {
+    var formattedSkill = HTMLskills.replace("%data%",bio.skills[skill]);
+    $("#skills").append(formattedSkill);
+  }
+
+}
+
+if (work.jobs.length > 0)
+{
+    for (job in work.jobs)
+    {
+      var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
+      var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[job].title);
+      var formattedDates = HTMLworkDates.replace("%data%",work.jobs[job].dates);
+      var formattedLocation = HTMLworkLocation.replace("%data%",work.jobs[job].location);
+      var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[job].description);
+      $("#workExperience").append(HTMLworkStart);
+      $(".work-entry:last").append(formattedEmployer+formattedTitle+
+                                   formattedLocation+formattedDates+formattedDescription);
+    }
+}
