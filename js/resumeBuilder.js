@@ -3,7 +3,7 @@
 var bio = {
   "name": "Barry Peddycord III",
   "role": "Research Assistant",
-  "pictureURL": "http://isharacomix.org/img/barry_avatar.png",
+  "bioPic": "http://isharacomix.org/img/barry_avatar.png",
   "welcome": "Hello world!",
   "skills": ["Python","Javascript","Django"],
   "contacts":
@@ -18,12 +18,13 @@ var bio = {
 
 /* Work information */
 var work = {
-  "positions" : [
+  "jobs" : [
     {
-      "position": "Research Assistant",
       "employer": "North Carolina State University",
-      "years": "2011-present",
-      "city": "Raleigh, NC, US"
+      "title": "Teaching and Research Assistant",
+      "dates": "2011-present",
+      "city": "Raleigh, NC, US",
+      "description": "Teacher and researcher"
     }
   ]
 }
@@ -35,37 +36,39 @@ var education = {
     {
       "name": "North Carolina State University",
       "city": "Raleigh, NC, US",
-      "degree": "Bachelor of Science",
+      "degree": "Master of Science",
       "majors": ["computer science"],
-      "year": 2011
+      "year": 2014,
+      "url": "http://csc.ncsu.edu"
     },
     {
       "name": "North Carolina State University",
       "city": "Raleigh, NC, US",
-      "degree": "Master of Science",
+      "degree": "Bachelor of Science",
       "majors": ["computer science"],
-      "year": 2014
+      "year": 2011,
+      "url": "http://csc.ncsu.edu"
     }
   ],
   "MOOCs" : [
     {
       "name": "Games without Chance: Combinatorial Game Theory",
       "completed": "March 2014",
-      "site": "Coursera",
+      "school": "Coursera",
       "instructor": "Tom Morley",
       "url": "https://www.coursera.org/course/cgt"
     },
     {
       "name": "Internet History, Technology, and Security",
       "completed": "March 2014",
-      "site": "Coursera",
+      "school": "Coursera",
       "instructor": "Charles Severance",
       "url": "https://www.coursera.org/learn/insidetheinternet"
     },
     {
       "name": "Gamification",
       "completed": "May 2013",
-      "site": "Coursera",
+      "school": "Coursera",
       "instructor": "Kevin Werbach",
       "url": "https://www.coursera.org/learn/gamification"
     }
@@ -74,8 +77,17 @@ var education = {
 
 
 var projects = {
+  "projects":[
+    {
+      "title": "#8bitmooc",
+      "dates": "2012-2013",
+      "description": "Make NES games",
+      "images": [
+        "http://isharacomix.org/img/barry_avatar.png"
+      ]
+    }
 
-
+  ]
 }
 
 
